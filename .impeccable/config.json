@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "docs/index.html"
+        ],
+        "createdAt": "2026-11-15T08:41:10.962Z",
+        "reason": "GODsend design system mandates the laser glow on dark surfaces (DESIGN.md, same as godsend-psp site)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "docs/index.html"
+        ],
+        "createdAt": "2026-11-15T08:49:18.080Z",
+        "reason": "GODsend design system uses mono uppercase eyebrows above heroes (DESIGN.md); same pattern as the godsend-psp site"
+      }
+    ]
+  }
+}

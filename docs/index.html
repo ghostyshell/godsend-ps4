@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GODsend PS4 - console manager for PlayStation 4</title>
+<meta name="description" content="Manage a GoldHEN PS4 over FTP: installed library, remote package installs, a virtual DualShock 4, saves, downloads and PKG tools, in one desktop app.">
+<meta property="og:title" content="GODsend PS4">
+<meta property="og:description" content="Manage a GoldHEN PS4 from one window.">
+<meta property="og:image" content="site-library.png">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --ink: #04060c; --surface: rgba(16,20,34,.72); --line: rgba(255,255,255,.07);
+    --text: #eef2fb; --dim: #a5b0c7; --faint: #7b869f;
+    --laser: #6d8bff; --laser-2: #56e8f5;
+    --grad: linear-gradient(112deg,#56e8f5,#6d8bff 52%,#8678ff);
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+    --sans: "Chakra Petch", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ink); color: var(--text); font-family: var(--sans);
+    line-height: 1.55;
+    background-image:
+      radial-gradient(60rem 40rem at 85% -10%, rgba(109,139,255,.16), transparent 60%),
+      radial-gradient(50rem 30rem at 5% 10%, rgba(86,232,245,.10), transparent 60%),
+      radial-gradient(40rem 30rem at 50% 110%, rgba(242,192,120,.07), transparent 60%);
+  }
+  a { color: var(--laser-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px 80px; }
+  header { display: flex; align-items: center; gap: 12px; padding: 26px 0; }
+  header img { width: 34px; height: 34px; object-fit: contain; border-radius: 9px; }
+  header .name { font-weight: 700; letter-spacing: .02em; }
+  header .grow { flex: 1; }
+  nav a { color: var(--dim); font-size: 14px; margin-left: 18px; }
+  .hero { padding: 52px 0 10px; }
+  .eyebrow { font: 11px var(--mono); letter-spacing: .22em; text-transform: uppercase; color: var(--laser-2); }
+  h1 { font-size: clamp(38px, 6.5vw, 68px); line-height: 1.04; letter-spacing: -.02em; margin: 14px 0 16px; }
+  .laser { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lead { max-width: 700px; color: var(--dim); font-size: 17px; }
+  .cta { display: flex; gap: 10px; flex-wrap: wrap; margin: 26px 0 18px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); color: var(--text); border-radius: 10px; padding: 11px 16px; font-weight: 600; }
+  .btn:hover { border-color: rgba(109,139,255,.5); text-decoration: none; }
+  .btn.primary { background: var(--grad); color: #05070c; border: none; box-shadow: 0 12px 34px -14px rgba(109,139,255,.65); }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font: 12px var(--mono); color: var(--dim); }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--laser-2); box-shadow: 0 0 8px var(--laser-2); }
+  h2 { font-size: 24px; margin: 56px 0 6px; }
+  .sub { color: var(--faint); font-size: 14px; margin: 0 0 18px; }
+  .screens { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .screens img { width: 100%; border-radius: 16px; border: 1px solid var(--line); display: block; box-shadow: 0 30px 70px -50px #000; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+  .grid article { border: 1px solid var(--line); background: var(--surface); border-radius: 16px; padding: 18px; }
+  .grid h3 { margin: 0 0 6px; font-size: 16px; }
+  .grid p { margin: 0; color: var(--dim); font-size: 14px; }
+  .grid.guides a { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; color: var(--text); }
+  .grid.guides a:hover { border-color: rgba(109,139,255,.5); text-decoration: none; }
+  code, pre { font-family: var(--mono); font-size: 13px; }
+  pre { background: rgba(8,11,20,.8); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; overflow-x: auto; color: var(--dim); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { font: 11px var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
+  footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--faint); font-size: 13px; display: flex; gap: 12px; flex-wrap: wrap; }
+  footer .grow { flex: 1; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon.png" alt="">
+    <span class="name">GODsend PS4</span>
+    <span class="grow"></span>
+    <nav>
+      <a href="#download">Download</a>
+      <a href="#features">Features</a>
+      <a href="#pad">Controller</a>
+      <a href="#mcp">MCP</a>
+      <a href="guides/">Guides</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">GOLDHEN PLAYSTATION 4</div>
+    <h1>Your PS4,<br><span class="laser">on your desktop.</span></h1>
+    <p class="lead">
+      Connect over FTP, see what is installed, stream a package straight into
+      the console's installer, drive it with a virtual DualShock 4, and keep
+      saves and conversions in the same window. Same Rust and Tauri stack as
+      GODsend PSP.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#build">Build from source</a>
+      <a class="btn" href="guides/">Read the guides</a>
+    </div>
+    <div class="chips">
+      <span class="chip"><span class="dot"></span>GoldHEN FTP</span>
+      <span class="chip"><span class="dot"></span>Remote package install</span>
+      <span class="chip"><span class="dot"></span>Virtual DualShock 4</span>
+      <span class="chip"><span class="dot"></span>macOS, Windows, Linux</span>
+    </div>
+  </section>
+
+
+  <h2 id="download">Download</h2>
+  <p class="sub">GoFile is the primary mirror, file.kiwi is the encrypted backup. Links refresh weekly.</p>
+  <table id="dl">
+    <thead><tr><th>Build</th><th>GoFile</th><th>file.kiwi</th><th>Size</th></tr></thead>
+    <tbody><tr><td colspan="4">Fetching the current build...</td></tr></tbody>
+  </table>
+  <script>
+    (async () => {
+      const body = document.querySelector("#dl tbody");
+      try {
+        const res = await fetch("downloads.json?v=" + Date.now());
+        const feed = await res.json();
+        const rows = (feed.artifacts || []).map((a) => {
+          const cell = (url, text) => url ? `<a href="${url}">${text}</a>` : "pending";
+          return `<tr><td><code>${a.name}</code><br><span class="sub">${a.label}</span></td>` +
+            `<td>${cell(a.gofile, "Download")}</td><td>${cell(a.kiwi, "Mirror")}</td>` +
+            `<td>${a.size || ""}</td></tr>`;
+        });
+        body.innerHTML = rows.join("") || `<tr><td colspan="4">No build published yet. Build from source below.</td></tr>`;
+      } catch {
+        body.innerHTML = `<tr><td colspan="4">No build published yet. Build from source below.</td></tr>`;
+      }
+    })();
+  </script>
+
+  <section class="screens" aria-label="Screenshots">
+    <img src="site-library.png" alt="Installed library grid with icons, versions and package state">
+    <img src="site-controller.png" alt="Virtual DualShock 4 with d-pad, sticks and triggers">
+    <img src="site-home.png" alt="Console dashboard with FTP, installer and pad status">
+    <img src="site-devices.png" alt="Console list with ports, test and discovery">
+    <img src="site-files.png" alt="Two pane local and console file manager">
+    <img src="site-homebrew.png" alt="Homebrew catalog with release assets">
+  </section>
+
+  <h2 id="features">Everything in one window</h2>
+  <p class="sub">The parts of managing a GoldHEN PS4 that usually need three tools and an FTP client.</p>
+  <div class="grid">
+    <article><h3>Console status</h3><p>FTP latency and banner, installer and pad reachability, installed title and package counts, all probed from the real ports.</p></article>
+    <article><h3>Library</h3><p>Installed titles from appmeta with icons, ids and versions. Patches and DLC stay out of the grid; packages waiting in <code>/user/pkg</code> have their own tab.</p></article>
+    <article><h3>Remote install</h3><p>GoldHEN takes a URL, so the app serves the PKG over a one-shot HTTP server and lets the console pull it, resume support included. A 40 GB title is never copied twice.</p></article>
+    <article><h3>Virtual DualShock 4</h3><p>Buttons, triggers, both sticks, PS, share, options and touchpad click, in up to four slots, with keyboard mapping.</p></article>
+    <article><h3>Payloads</h3><p>Send a <code>.bin</code> or <code>.elf</code> over the bin loader on 9090 from the Console page or the CLI.</p></article>
+    <article><h3>Saves</h3><p>List save folders, zip them into the download folder, restore them, delete with a confirmation.</p></article>
+    <article><h3>Conversions</h3><p>Unpack a PKG to a folder with PFS decryption, split for FAT32, merge a split set.</p></article>
+    <article><h3>Files</h3><p>Two panes, local and console, with tree upload and download and FAT32 splitting on the way to USB.</p></article>
+  </div>
+
+  <h2 id="pad">A real pad, not a remote screen</h2>
+  <p class="sub">Input travels over a WebRTC data channel to the Control4Free payload.</p>
+  <p class="lead" style="font-size:15px">
+    The payload opens port 4264 and refuses any request whose
+    <code>Origin</code> is not its own or <code>null</code>, so the offer
+    exchange runs in Rust while the app's webview owns the peer connection.
+    Input goes out at 60 Hz, which also repairs a release lost in transit.
+  </p>
+
+  <h2 id="mcp">An MCP server that starts with the app</h2>
+  <p class="sub">Let an agent drive the console with the same tools you use.</p>
+  <p class="lead" style="font-size:15px">
+    While GODsend PS4 is open it serves the Model Context Protocol on loopback
+    (default <code>http://127.0.0.1:8744/mcp</code>). Tools cover status,
+    library, install, payloads, files, conversions, saves, search, homebrew and
+    the pad service.
+  </p>
+  <pre>claude mcp add --transport http godsend-ps4 http://127.0.0.1:8744/mcp</pre>
+  <p class="sub">There is also a stdio binary for clients that spawn their own server: <code>godsend-ps4-mcp</code>.</p>
+
+  <h2 id="build">Build</h2>
+  <pre>cargo test --workspace
+npm --prefix app install
+npm --prefix app run build
+npm --prefix app run tauri build</pre>
+  <p class="sub">The CLI: <code>cargo build --release -p godsend-ps4-cli</code>, then <code>godsend-ps4 help</code>.</p>
+
+  <h2>Requirements</h2>
+  <table>
+    <tr><th>Need</th><th>Why</th></tr>
+    <tr><td>GoldHEN with FTP on 2121</td><td>Every file operation.</td></tr>
+    <tr><td>Remote package installer on 12800</td><td>Installs. Without it the app uploads to <code>/user/pkg</code> instead.</td></tr>
+    <tr><td>Control4Free on 4264</td><td>The virtual controller. Install it from the Homebrew page.</td></tr>
+    <tr><td>aria2c (optional)</td><td>16-connection downloads; without it downloads use one connection.</td></tr>
+    <tr><td>Real-Debrid or TorBox keys (optional)</td><td>Resolve debrid links. Internet Archive needs neither.</td></tr>
+    <tr><td>GameSearch backend (optional)</td><td>Link resolution for the game index. Browsing works against the public site.</td></tr>
+  </table>
+
+  <h2>Guides</h2>
+  <div class="grid guides">
+    <a href="guides/connect-your-ps4.md">Connect your PS4</a>
+    <a href="guides/installing-games.md">Install games and homebrew</a>
+    <a href="guides/controller.md">Use the virtual controller</a>
+    <a href="guides/saves.md">Back up saves</a>
+    <a href="guides/conversions.md">Convert and split</a>
+    <a href="guides/troubleshooting.md">Troubleshooting</a>
+  </div>
+
+  <footer>
+    <span>GODsend PS4</span>
+    <span class="grow"></span>
+    <span>MIT licensed</span>
+    <span>Not affiliated with Sony</span>
+  </footer>
+</div>
+</body>
+</html>
