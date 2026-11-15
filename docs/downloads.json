@@ -1,0 +1,78 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-11-15",
+  "artifacts": [
+    {
+      "name": "godsend-ps4-0.1.0-linux-x64.AppImage",
+      "label": "Linux (x86_64, AppImage)",
+      "gofile": "https://gofile.io/d/qI3SqQtM",
+      "kiwi": "https://file.kiwi/c3dd9d21#n89A_aRW97UKK3b3ANZTtA",
+      "size": "80.9 MiB",
+      "sha256": "b645c7bad281d67e745193e388745093f10eda19b06f2b606f4e96f7466c3ea2"
+    },
+    {
+      "name": "godsend-ps4-cli-0.1.0-linux-x64.tar.gz",
+      "label": "Linux (x86_64, CLI)",
+      "gofile": "https://gofile.io/d/e3CT6kTm",
+      "kiwi": "https://file.kiwi/cc489133#oE4aeRwfRPtJ2vi6UbiFPg",
+      "size": "4.4 MiB",
+      "sha256": "51d334e6d444dd2c7474a2c58d9569c250af18f911134321cbb300a1471275ad"
+    },
+    {
+      "name": "godsend-ps4-cli-0.1.0-macos-arm64.tar.gz",
+      "label": "macOS (Apple Silicon, CLI)",
+      "gofile": "https://gofile.io/d/MAOQhguW",
+      "kiwi": "https://file.kiwi/410d3c6f#eR7EWJvW5AsF9UExuZH_IQ",
+      "size": "4.0 MiB",
+      "sha256": "765972ef95bb5e1befacba824b6eda1cde018c27aba5433649508697474a1bf1"
+    },
+    {
+      "name": "godsend-ps4-cli-0.1.0-macos-x64.tar.gz",
+      "label": "macOS (Intel, CLI)",
+      "gofile": "https://gofile.io/d/LwGcduLn",
+      "kiwi": "https://file.kiwi/3189fbdd#E66qEiCDf8AuQRT8VusvGQ",
+      "size": "4.3 MiB",
+      "sha256": "12d99cc38b8341728bb2818d8a2dde19472a07dc5a43a12e23e3411028766103"
+    },
+    {
+      "name": "godsend-ps4-cli-0.1.0-windows-x64.zip",
+      "label": "Windows (x86_64, CLI)",
+      "gofile": "https://gofile.io/d/LYSy5pEp",
+      "kiwi": "https://file.kiwi/13262d43#N-iwtjGRwhNOPXhVXF-8Qw",
+      "size": "4.4 MiB",
+      "sha256": "c05d53a5ed4236cd81e6dcd3b7a4ea75df6c309184fbf82db5da2f4e4ad53cc4"
+    },
+    {
+      "name": "godsend-ps4-0.1.0-linux-x64.deb",
+      "label": "Linux (x86_64, deb)",
+      "gofile": "https://gofile.io/d/xCRvJDSP",
+      "kiwi": "https://file.kiwi/077f36cd#SjB_dyyRlEHjygXlmEPk3A",
+      "size": "6.1 MiB",
+      "sha256": "ae4e081ad416adcb61d7f84d67591e359cba43f4c32030936ebf363702d35545"
+    },
+    {
+      "name": "godsend-ps4-0.1.0-arm64.dmg",
+      "label": "macOS (Apple Silicon)",
+      "gofile": "https://gofile.io/d/Ntsq8AtL",
+      "kiwi": "https://file.kiwi/e3579259#85jAjz2xgRI73a2syi3eug",
+      "size": "6.3 MiB",
+      "sha256": "525c154418e0b1fcf210dfb358b6598cff0fab8be7cfe86e95fb47c56d7d5b3a"
+    },
+    {
+      "name": "godsend-ps4-0.1.0-x64.dmg",
+      "label": "macOS (Intel)",
+      "gofile": "https://gofile.io/d/kVu8Nabo",
+      "kiwi": "https://file.kiwi/df41c20f#VQHxJTNeasNtsUt5mP6qvw",
+      "size": "6.8 MiB",
+      "sha256": "9d71bbf37f95d1049be432c4f322e6eec99352d4dd7697ff10fbe45ff975b32b"
+    },
+    {
+      "name": "godsend-ps4-0.1.0-x64-setup.exe",
+      "label": "Windows (x86_64, installer)",
+      "gofile": "https://gofile.io/d/uhHTMf4f",
+      "kiwi": "https://file.kiwi/181e0f75#o8v3PmGbeGVdqzqukCKG6Q",
+      "size": "4.3 MiB",
+      "sha256": "4d8815a633fb3c260b9acfc3134f610aff1a63c2f9238a5548043515760933b6"
+    }
+  ]
+}

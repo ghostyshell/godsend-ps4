@@ -208,7 +208,7 @@ python3 -I scripts/patch-release-links.py "$LINKS" || die "could not patch READM
 if git diff --quiet -- README.md docs/downloads.json; then
   log "download links already current - nothing to commit"
 else
-  git add README.md
+  git add README.md docs/downloads.json
   git commit -q -m "docs: refresh ${V} download links (GoFile + file.kiwi)
 
 Weekly mirror refresh: the current version is rebuilt and re-uploaded to
