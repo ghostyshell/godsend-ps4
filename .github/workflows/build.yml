@@ -32,8 +32,8 @@ jobs:
       - name: Build app bundle
         working-directory: app
         run: npx tauri build --bundles app --target ${{ matrix.target }}
-      - name: Build CLI
-        run: cargo build --release -p godsend-ps4-cli --target ${{ matrix.target }}
+      - name: Build CLI and MCP
+        run: cargo build --release -p godsend-ps4-cli -p godsend-ps4-mcp --target ${{ matrix.target }}
       - name: Ad-hoc sign the app bundle
         run: |
           # Apple Silicon refuses bundles without a valid bundle signature

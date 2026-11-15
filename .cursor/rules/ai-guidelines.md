@@ -1,4 +1,4 @@
-# AI guidelines for godsend-ps3
+# AI guidelines for godsend-ps4
 
 Read `AGENTS.md` first for the architecture and invariants, and `DESIGN.md`
 before touching any UI code.
@@ -29,22 +29,26 @@ raw hex in components is banned.
 7. Icons come from `assets/logo-source.png`. Regenerate with
    `npx --prefix app tauri icon assets/logo-source.png`; keep
    `app/src/assets/logo.png` the same mark.
-8. Tests: `cargo test --workspace` covers parsers, the ISO writer, decryption,
-   the fake-console end-to-end flow and MCP; `npm --prefix app run test:ui`
-   covers every page through the mock bridge. Both must pass before a commit.
+8. Tests: `cargo test --workspace` covers parsers, `param.json` fallbacks,
+   the PKG header scan, the fake-console end-to-end flow and MCP;
+   `npm --prefix app run test:ui` covers every page through the mock bridge.
+   Both must pass before a commit.
 
-## PS3 domain notes
+## PS4 domain notes
 
-- Detection is network based: FTP on port 21 plus webMAN MOD on port 80.
-  There is no mounted volume.
-- Remote paths are absolute and start with `/dev_`: `dev_hdd0` is internal,
-  `dev_usb000` and friends are external.
-- Games live in `dev_hdd0/game` (digital), `dev_hdd0/GAMES` (JB folders),
-  `dev_hdd0/PS3ISO`, `PS2ISO`, `PSXISO`, `PSPISO`; packages in `pkg` and
-  `packages`.
-- webMAN commands are concatenated paths (`/install.ps3/dev_hdd0/...`,
-  `/mount.ps3/dev_hdd0/...`) except its own query commands
-  (`pad.ps3?cross`, `reboot.ps3?quick`).
+- Everything is network based: FTP on 2121 (GoldHEN), the remote package
+  installer on 12800, the bin loader on 9090, the Control4Free pad on 4264.
+  There is no mounted volume and no system-info page.
+- Remote paths are absolute: `/user/appmeta`, `/user/pkg`, `/user/home`,
+  `/mnt/usb0`, `/mnt/ext0`.
+- Installed titles are identified by `param.json` under appmeta. Key names
+  vary by GoldHEN build; always fall back to the content id.
+- A PS4 installs PKG files, not folders. Never copy a tree into `/user/app`.
+- Installed titles are removed from the console's own storage menu; deleting
+  folders over FTP leaves a ghost entry, so the app refuses.
+- The installer takes a URL, not an upload: serve the file on the interface
+  that reaches the console and post `{"type":"direct","packages":[url]}`.
+- The pad payload refuses a foreign `Origin`, so the SDP exchange runs in
+  Rust; the webview owns the peer connection and the two negotiated data
+  channels (ids 0 and 1).
 - FAT32 splits are `name.0`, `name.1` at 4095 MiB by default.
-- Redump decryption is AES-128-CBC per 2048-byte sector with a sector-index
-  IV. Leave the region map zeroed after a successful run.

@@ -50,7 +50,8 @@ source of truth; `npx tauri icon` regenerates every platform icon from it.
 ## Shell layout
 
 ```
-topbar      62px (84px on macOS for the overlay title bar), drag region
+topbar      62px (84px on macOS for the overlay title bar, with 22px top
+            padding so the brand clears the traffic lights; never left padding)
 rail        236px nav, 11 sections, icon plus label, collapses under 1080px
 workspace   one scrolling page, content max width 980px
 inspector   fixed right column 300px: device card plus job queue, hidden
@@ -60,6 +61,12 @@ statusbar   34px: console dot, webMAN dot, unmount, version
 
 Sections: Console, Devices, Library, Controller, Game Index, Downloads,
 Files, Convert, Homebrew, Updates, Settings.
+
+On macOS the window uses an overlay title bar. `app/src/main.tsx` sets
+`data-os="mac"` inside the real Tauri app and the stylesheet pads the topbar
+22px from the top inside an 84px row, so the brand clears the traffic lights.
+Do not use `padding-left`; it shifts the brand sideways instead. Browser
+previews have no traffic lights and cannot show the inset.
 
 ## Ambient backdrop
 

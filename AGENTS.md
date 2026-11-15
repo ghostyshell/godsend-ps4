@@ -96,6 +96,15 @@ the install loop end to end.
 The UI dev server is on port 1436. Sibling apps use 1420, and Playwright's
 `reuseExistingServer` will happily test the wrong app if the ports collide.
 
+## macOS window chrome
+
+The app uses the overlay title bar, so the webview draws under the traffic
+lights. `app/src/main.tsx` sets `data-os="mac"` only inside the real Tauri app
+(and for `?os=mac` previews); the stylesheet then makes the topbar an 84px row
+with `padding-top: 22px`. Never use `padding-left` for this: it moves the brand
+to the right of the traffic lights. `?mock=1` browser previews cannot prove the
+inset, so launch the built app to check it.
+
 ## Releases and copy
 
 - Version lives in `Cargo.toml` (workspace), `app/package.json`,
