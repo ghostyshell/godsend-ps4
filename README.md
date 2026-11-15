@@ -7,9 +7,8 @@
 
 A desktop workshop for a jailbroken PS4 running GoldHEN. It talks to the
 console over FTP, streams packages straight into its installer, drives a
-virtual DualShock 4, and keeps the whole library in one window. Same family
-look and feel as GODsend PSP, GODsend PS3 and GODsend 360, built on the same
-Rust engine + Tauri 2 + React stack.
+virtual DualShock 4, and keeps the whole library in one window. Built with a
+Rust engine, Tauri 2 and React.
 
 | Console | Library |
 | --- | --- |
@@ -74,8 +73,8 @@ One short guide per feature lives in [docs/guides](docs/guides/index.md).
 | `godsend-ps4-0.1.0-x64-setup.exe` | [Download](https://gofile.io/d/uhHTMf4f) | [Mirror](https://file.kiwi/181e0f75#o8v3PmGbeGVdqzqukCKG6Q) | 4.3 MiB |
 <!-- downloads:end -->
 
-Mirrors follow the sibling projects: **GoFile** is the primary host and
-**file.kiwi** is the encrypted backup. Links are refreshed weekly because
+**GoFile** is the primary host and **file.kiwi** is the encrypted backup. Links
+are refreshed weekly because
 GoFile expires free-tier files. Until the first upload lands, build from
 source with the steps below.
 
