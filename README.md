@@ -60,23 +60,22 @@ One short guide per feature lives in [docs/guides](docs/guides/index.md).
 ## Download
 
 <!-- downloads:start -->
-| Build | GoFile (primary) | file.kiwi (backup) | Size |
-| --- | --- | --- | --- |
-| `godsend-ps4-0.1.0-linux-x64.AppImage` | [Download](https://gofile.io/d/qI3SqQtM) | [Mirror](https://file.kiwi/c3dd9d21#n89A_aRW97UKK3b3ANZTtA) | 80.9 MiB |
-| `godsend-ps4-cli-0.1.0-linux-x64.tar.gz` | [Download](https://gofile.io/d/e3CT6kTm) | [Mirror](https://file.kiwi/cc489133#oE4aeRwfRPtJ2vi6UbiFPg) | 4.4 MiB |
-| `godsend-ps4-cli-0.1.0-macos-arm64.tar.gz` | [Download](https://gofile.io/d/MAOQhguW) | [Mirror](https://file.kiwi/410d3c6f#eR7EWJvW5AsF9UExuZH_IQ) | 4.0 MiB |
-| `godsend-ps4-cli-0.1.0-macos-x64.tar.gz` | [Download](https://gofile.io/d/LwGcduLn) | [Mirror](https://file.kiwi/3189fbdd#E66qEiCDf8AuQRT8VusvGQ) | 4.3 MiB |
-| `godsend-ps4-cli-0.1.0-windows-x64.zip` | [Download](https://gofile.io/d/LYSy5pEp) | [Mirror](https://file.kiwi/13262d43#N-iwtjGRwhNOPXhVXF-8Qw) | 4.4 MiB |
-| `godsend-ps4-0.1.0-linux-x64.deb` | [Download](https://gofile.io/d/xCRvJDSP) | [Mirror](https://file.kiwi/077f36cd#SjB_dyyRlEHjygXlmEPk3A) | 6.1 MiB |
-| `godsend-ps4-0.1.0-arm64.dmg` | [Download](https://gofile.io/d/Ntsq8AtL) | [Mirror](https://file.kiwi/e3579259#85jAjz2xgRI73a2syi3eug) | 6.3 MiB |
-| `godsend-ps4-0.1.0-x64.dmg` | [Download](https://gofile.io/d/kVu8Nabo) | [Mirror](https://file.kiwi/df41c20f#VQHxJTNeasNtsUt5mP6qvw) | 6.8 MiB |
-| `godsend-ps4-0.1.0-x64-setup.exe` | [Download](https://gofile.io/d/uhHTMf4f) | [Mirror](https://file.kiwi/181e0f75#o8v3PmGbeGVdqzqukCKG6Q) | 4.3 MiB |
+| Build | Download | Size |
+| --- | --- | --- |
+| `godsend-ps4-0.1.0-arm64.dmg` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-arm64.dmg) | 6.3 MiB |
+| `godsend-ps4-0.1.0-x64.dmg` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-x64.dmg) | 6.8 MiB |
+| `godsend-ps4-0.1.0-x64-setup.exe` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-x64-setup.exe) | 4.3 MiB |
+| `godsend-ps4-0.1.0-linux-x64.AppImage` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-linux-x64.AppImage) | 80.9 MiB |
+| `godsend-ps4-0.1.0-linux-x64.deb` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-linux-x64.deb) | 6.1 MiB |
+| `godsend-ps4-cli-0.1.0-linux-x64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-linux-x64.tar.gz) | 4.4 MiB |
+| `godsend-ps4-cli-0.1.0-macos-arm64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-macos-arm64.tar.gz) | 4.0 MiB |
+| `godsend-ps4-cli-0.1.0-macos-x64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-macos-x64.tar.gz) | 4.3 MiB |
+| `godsend-ps4-cli-0.1.0-windows-x64.zip` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-windows-x64.zip) | 4.4 MiB |
 <!-- downloads:end -->
 
-**GoFile** is the primary host and **file.kiwi** is the encrypted backup. Links
-are refreshed weekly because
-GoFile expires free-tier files. Until the first upload lands, build from
-source with the steps below.
+Builds are hosted on **Cloudflare R2**: a link stays valid until the next
+version. Until the first upload lands, build from source with the steps
+below.
 
 ## Guides
 
