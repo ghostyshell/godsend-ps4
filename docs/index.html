@@ -103,10 +103,10 @@
 
 
   <h2 id="download">Download</h2>
-  <p class="sub">GoFile is the primary mirror, file.kiwi is the encrypted backup. Links refresh weekly.</p>
+  <p class="sub">Builds are hosted on Cloudflare R2. Links stay valid until the next version.</p>
   <table id="dl">
-    <thead><tr><th>Build</th><th>GoFile</th><th>file.kiwi</th><th>Size</th></tr></thead>
-    <tbody><tr><td colspan="4">Fetching the current build...</td></tr></tbody>
+    <thead><tr><th>Build</th><th>Download</th><th>Size</th></tr></thead>
+    <tbody><tr><td colspan="3">Fetching the current build...</td></tr></tbody>
   </table>
   <script>
     (async () => {
@@ -117,7 +117,7 @@
         const rows = (feed.artifacts || []).map((a) => {
           const cell = (url, text) => url ? `<a href="${url}">${text}</a>` : "pending";
           return `<tr><td><code>${a.name}</code><br><span class="sub">${a.label}</span></td>` +
-            `<td>${cell(a.gofile, "Download")}</td><td>${cell(a.kiwi, "Mirror")}</td>` +
+            `<td>${cell(a.url, "Download")}</td>` +
             `<td>${a.size || ""}</td></tr>`;
         });
         body.innerHTML = rows.join("") || `<tr><td colspan="4">No build published yet. Build from source below.</td></tr>`;
