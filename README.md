@@ -62,15 +62,15 @@ One short guide per feature lives in [docs/guides](docs/guides/index.md).
 <!-- downloads:start -->
 | Build | Download | Size |
 | --- | --- | --- |
-| `godsend-ps4-0.1.0-arm64.dmg` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-arm64.dmg) | 6.3 MiB |
-| `godsend-ps4-0.1.0-x64.dmg` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-x64.dmg) | 6.8 MiB |
-| `godsend-ps4-0.1.0-x64-setup.exe` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-x64-setup.exe) | 4.3 MiB |
-| `godsend-ps4-0.1.0-linux-x64.AppImage` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-linux-x64.AppImage) | 80.9 MiB |
-| `godsend-ps4-0.1.0-linux-x64.deb` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-linux-x64.deb) | 6.1 MiB |
-| `godsend-ps4-cli-0.1.0-linux-x64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-linux-x64.tar.gz) | 4.4 MiB |
-| `godsend-ps4-cli-0.1.0-macos-arm64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-macos-arm64.tar.gz) | 4.0 MiB |
-| `godsend-ps4-cli-0.1.0-macos-x64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-macos-x64.tar.gz) | 4.3 MiB |
-| `godsend-ps4-cli-0.1.0-windows-x64.zip` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-windows-x64.zip) | 4.4 MiB |
+| `godsend-ps4-0.1.1-arm64.dmg` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-arm64.dmg) | 6.3 MiB |
+| `godsend-ps4-0.1.1-x64.dmg` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-x64.dmg) | 6.8 MiB |
+| `godsend-ps4-0.1.1-x64-setup.exe` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-x64-setup.exe) | 4.3 MiB |
+| `godsend-ps4-0.1.1-linux-x64.AppImage` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-linux-x64.AppImage) | 80.9 MiB |
+| `godsend-ps4-0.1.1-linux-x64.deb` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-linux-x64.deb) | 6.1 MiB |
+| `godsend-ps4-cli-0.1.1-linux-x64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-linux-x64.tar.gz) | 4.4 MiB |
+| `godsend-ps4-cli-0.1.1-macos-arm64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-macos-arm64.tar.gz) | 4.0 MiB |
+| `godsend-ps4-cli-0.1.1-macos-x64.tar.gz` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-macos-x64.tar.gz) | 4.3 MiB |
+| `godsend-ps4-cli-0.1.1-windows-x64.zip` | [Download](https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-windows-x64.zip) | 4.4 MiB |
 <!-- downloads:end -->
 
 Builds are hosted on **Cloudflare R2**: a link stays valid until the next

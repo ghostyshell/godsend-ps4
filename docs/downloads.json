@@ -1,69 +1,69 @@
 {
-  "version": "0.1.0",
-  "updated": "2026-11-24",
+  "version": "0.1.1",
+  "updated": "2026-11-25",
   "artifacts": [
     {
-      "name": "godsend-ps4-0.1.0-arm64.dmg",
+      "name": "godsend-ps4-0.1.1-arm64.dmg",
       "label": "macOS (Apple Silicon)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-arm64.dmg",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-arm64.dmg",
       "size": "6.3 MiB",
-      "sha256": "2217a69be23e5aa540c0ae4dda30ad539869ae7917b7360d5bdb2c748674639b"
+      "sha256": "1f3dd66386d2c883314f51f8dfb64bd7d1eca5518adbd98a328d785ed117de3b"
     },
     {
-      "name": "godsend-ps4-0.1.0-x64.dmg",
+      "name": "godsend-ps4-0.1.1-x64.dmg",
       "label": "macOS (Intel)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-x64.dmg",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-x64.dmg",
       "size": "6.8 MiB",
-      "sha256": "875e8cb3b75dc5653e3ae6d6fd8742f9cbe0d2d74258b2f358a3822ee6669612"
+      "sha256": "e1b0489c9e34899a6875f26f6a76b6198f21e3faa1af4d960e040b9d586ad954"
     },
     {
-      "name": "godsend-ps4-0.1.0-x64-setup.exe",
+      "name": "godsend-ps4-0.1.1-x64-setup.exe",
       "label": "Windows (x86_64, installer)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-x64-setup.exe",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-x64-setup.exe",
       "size": "4.3 MiB",
-      "sha256": "97313609833c93e026706471cb64a65293de6efead8cb82efdb84ab2433e63fc"
+      "sha256": "d59ec598773c1a427c51b9ce009deac53626af489def1cae2d3d91bdbd262742"
     },
     {
-      "name": "godsend-ps4-0.1.0-linux-x64.AppImage",
+      "name": "godsend-ps4-0.1.1-linux-x64.AppImage",
       "label": "Linux (x86_64, AppImage)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-linux-x64.AppImage",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-linux-x64.AppImage",
       "size": "80.9 MiB",
-      "sha256": "b1ec52927dee4e9073ed1e23620c61d5c5332df609a127fac1c51a41ed927edc"
+      "sha256": "24a20b243b92d74352ae8685a321154ad36c8d2baff03ac12fd070d6e6299c6b"
     },
     {
-      "name": "godsend-ps4-0.1.0-linux-x64.deb",
+      "name": "godsend-ps4-0.1.1-linux-x64.deb",
       "label": "Linux (x86_64, deb)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-0.1.0-linux-x64.deb",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-0.1.1-linux-x64.deb",
       "size": "6.1 MiB",
-      "sha256": "2013b4249702254ea1bce931bd3cefc9c9dbbf55a6994594288c26fbac780e69"
+      "sha256": "7633c79528cdb4c6104e38f8a6b5b4cb0609418739b475bfa3393c450d5759d6"
     },
     {
-      "name": "godsend-ps4-cli-0.1.0-linux-x64.tar.gz",
+      "name": "godsend-ps4-cli-0.1.1-linux-x64.tar.gz",
       "label": "Linux (x86_64, CLI)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-linux-x64.tar.gz",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-linux-x64.tar.gz",
       "size": "4.4 MiB",
-      "sha256": "33edd31d8b4ab2fdff8f433476f90b6f55bd596b0819417afd2daa36f18b5fa8"
+      "sha256": "90dcd54b4f02bac50840da2488c5ac445f422d9278ae5df36401376fc9b8e5fb"
     },
     {
-      "name": "godsend-ps4-cli-0.1.0-macos-arm64.tar.gz",
+      "name": "godsend-ps4-cli-0.1.1-macos-arm64.tar.gz",
       "label": "macOS (Apple Silicon, CLI)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-macos-arm64.tar.gz",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-macos-arm64.tar.gz",
       "size": "4.0 MiB",
-      "sha256": "888c83b43ed3030d75a88ebb1be6d0fbfe8fcb3712c37399e32f56756894b342"
+      "sha256": "f15d8a51d8cce2b35b280bc693f00ba1d45bb3fbd0061f3d953aad9d9543339d"
     },
     {
-      "name": "godsend-ps4-cli-0.1.0-macos-x64.tar.gz",
+      "name": "godsend-ps4-cli-0.1.1-macos-x64.tar.gz",
       "label": "macOS (Intel, CLI)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-macos-x64.tar.gz",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-macos-x64.tar.gz",
       "size": "4.3 MiB",
-      "sha256": "44e7f7da7cb25df42cdb6ca31505208edf75119af6fff7973ac93ff9e824d8f0"
+      "sha256": "c7cfba2f05d892268673b5d9ef606e27035de69474019fec97e61def97b55a2c"
     },
     {
-      "name": "godsend-ps4-cli-0.1.0-windows-x64.zip",
+      "name": "godsend-ps4-cli-0.1.1-windows-x64.zip",
       "label": "Windows (x86_64, CLI)",
-      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.0/godsend-ps4-cli-0.1.0-windows-x64.zip",
+      "url": "https://covers.debrid.in/godsend-ps4/releases/0.1.1/godsend-ps4-cli-0.1.1-windows-x64.zip",
       "size": "4.4 MiB",
-      "sha256": "2af0e0d3590a2959faf5cf208b393b0d2abd9c0a5ce0c68ae2917b57f4e6dfb1"
+      "sha256": "f98878bfe0dcadfad702b2bae66486a8f8f875839e8c916ed07e5a54adf2116b"
     }
   ]
 }
