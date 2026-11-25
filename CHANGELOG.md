@@ -2,7 +2,7 @@
 
 All notable changes to GODsend PS4 are recorded here, newest first.
 
-## [Unreleased]
+## [0.1.1] - 2026-11-25
 
 ### Changed
 
