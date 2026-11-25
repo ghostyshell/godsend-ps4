@@ -6,6 +6,7 @@ All notable changes to GODsend PS4 are recorded here, newest first.
 
 ### Changed
 
+- Accessibility pass: search and filter inputs have accessible names, file rows are keyboard selectable, docs links show a focus ring and honour reduced motion.
 - Downloads are hosted on Cloudflare R2 under versioned, immutable keys, so a
   link stays valid until the next version. The weekly GoFile/file.kiwi re-upload
   is gone: the scheduled job now only checks the live feed for a version bump,
